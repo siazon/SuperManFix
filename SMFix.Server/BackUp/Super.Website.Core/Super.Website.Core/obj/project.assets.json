@@ -13303,11 +13303,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\SuperMan\\Super.Website.Core\\Super.Website.Core\\Super.Website.Core.csproj",
+      "projectUniqueName": "E:\\SuperMan\\SMFix.Server\\SMFix.Server\\BackUp\\Super.Website.Core\\Super.Website.Core\\Super.Website.Core.csproj",
       "projectName": "Super.Website.Core",
-      "projectPath": "E:\\SuperMan\\Super.Website.Core\\Super.Website.Core\\Super.Website.Core.csproj",
+      "projectPath": "E:\\SuperMan\\SMFix.Server\\SMFix.Server\\BackUp\\Super.Website.Core\\Super.Website.Core\\Super.Website.Core.csproj",
       "packagesPath": "C:\\Users\\siazon\\.nuget\\packages\\",
-      "outputPath": "E:\\SuperMan\\Super.Website.Core\\Super.Website.Core\\obj\\",
+      "outputPath": "E:\\SuperMan\\SMFix.Server\\SMFix.Server\\BackUp\\Super.Website.Core\\Super.Website.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

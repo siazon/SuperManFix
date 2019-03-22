@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\web\super\superMan\superMan\obj\Debug\
+E:\SuperMan\SMFix.Server\SMFix.Server\BackUp\superMan\superMan\obj\Debug\
 superMan
 none
 false
 DEBUG;TRACE
-D:\web\super\superMan\superMan\App.xaml
+E:\SuperMan\SMFix.Server\SMFix.Server\BackUp\superMan\superMan\App.xaml
 51894738550
 
-19838328048
-201378488050
+231281326099
+20-704568963
 MainWindow.xaml;Common\MessageDialog.xaml;View\ColorSetting.xaml;View\FixPriceView.xaml;View\systemConfigs.xaml;
 
-False
+True
 

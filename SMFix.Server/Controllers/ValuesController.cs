@@ -25,19 +25,16 @@ namespace SMFix.Server.Controllers
         // POST api/values
         public void Post([FromBody]string value)
         {
-            //master
         }
 
         // PUT api/values/5
         public void Put(int id, [FromBody]string value)
         {
-            //分支1
         }
 
         // DELETE api/values/5
         public void Delete(int id)
         {
-            // 分支q
         }
     }
 }
