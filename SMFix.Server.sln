@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMFix.Server", "SMFix.Server\SMFix.Server.csproj", "{0FA890EC-1811-4795-8CBF-BFA00D42163D}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Super.Website.Core", "..\Super.Website.Core\Super.Website.Core\Super.Website.Core.csproj", "{8D2B826E-5E1F-4E81-AA97-EB647DC8335E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "superMan", "..\superMan\superMan\superMan.csproj", "{17CC2E94-98D4-4A08-912A-E591E9B942FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +19,19 @@ Global
 		{0FA890EC-1811-4795-8CBF-BFA00D42163D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FA890EC-1811-4795-8CBF-BFA00D42163D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FA890EC-1811-4795-8CBF-BFA00D42163D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D2B826E-5E1F-4E81-AA97-EB647DC8335E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D2B826E-5E1F-4E81-AA97-EB647DC8335E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D2B826E-5E1F-4E81-AA97-EB647DC8335E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D2B826E-5E1F-4E81-AA97-EB647DC8335E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17CC2E94-98D4-4A08-912A-E591E9B942FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17CC2E94-98D4-4A08-912A-E591E9B942FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17CC2E94-98D4-4A08-912A-E591E9B942FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17CC2E94-98D4-4A08-912A-E591E9B942FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ED3DA49F-11E7-42AC-952A-896EF9C87EE8}
 	EndGlobalSection
 EndGlobal
