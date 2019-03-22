@@ -197,6 +197,67 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="BackUp\Super.Website.Core\Super.Website.Core\Common\GlobalData.cs" />
+    <Compile Include="BackUp\Super.Website.Core\Super.Website.Core\Common\HttpHelper.cs" />
+    <Compile Include="BackUp\Super.Website.Core\Super.Website.Core\Common\MySqlHelper.cs" />
+    <Compile Include="BackUp\Super.Website.Core\Super.Website.Core\Common\MySqlUnitity.cs" />
+    <Compile Include="BackUp\Super.Website.Core\Super.Website.Core\Common\WeChatAppDecrypt.cs" />
+    <Compile Include="BackUp\Super.Website.Core\Super.Website.Core\Controllers\BlandController.cs" />
+    <Compile Include="BackUp\Super.Website.Core\Super.Website.Core\Controllers\ColorController.cs" />
+    <Compile Include="BackUp\Super.Website.Core\Super.Website.Core\Controllers\ValuesController.cs" />
+    <Compile Include="BackUp\Super.Website.Core\Super.Website.Core\Models\Model.cs" />
+    <Compile Include="BackUp\Super.Website.Core\Super.Website.Core\obj\Debug\netcoreapp2.0\Super.Website.Core.AssemblyInfo.cs" />
+    <Compile Include="BackUp\Super.Website.Core\Super.Website.Core\Program.cs" />
+    <Compile Include="BackUp\Super.Website.Core\Super.Website.Core\Startup.cs" />
+    <Compile Include="BackUp\superMan\superMan\App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BackUp\superMan\superMan\Common\ContorllerItem.cs" />
+    <Compile Include="BackUp\superMan\superMan\Common\ExtensionMethod.cs" />
+    <Compile Include="BackUp\superMan\superMan\Common\MessageDialog.xaml.cs">
+      <DependentUpon>MessageDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BackUp\superMan\superMan\Common\systemGlobal.cs" />
+    <Compile Include="BackUp\superMan\superMan\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BackUp\superMan\superMan\Model\PushUser.cs" />
+    <Compile Include="BackUp\superMan\superMan\Model\tb_postAddr.cs" />
+    <Compile Include="BackUp\superMan\superMan\Model\tb_RAMfix.cs" />
+    <Compile Include="BackUp\superMan\superMan\Model\tb_user.cs" />
+    <Compile Include="BackUp\superMan\superMan\Model\WXJM.cs" />
+    <Compile Include="BackUp\superMan\superMan\Mysql\MySqlHelper.cs" />
+    <Compile Include="BackUp\superMan\superMan\Mysql\MySqlUitity.cs" />
+    <Compile Include="BackUp\superMan\superMan\obj\Debug\App.g.cs" />
+    <Compile Include="BackUp\superMan\superMan\obj\Debug\App.g.i.cs" />
+    <Compile Include="BackUp\superMan\superMan\obj\Debug\Common\MessageDialog.g.cs" />
+    <Compile Include="BackUp\superMan\superMan\obj\Debug\Common\MessageDialog.g.i.cs" />
+    <Compile Include="BackUp\superMan\superMan\obj\Debug\MainWindow.g.cs" />
+    <Compile Include="BackUp\superMan\superMan\obj\Debug\MainWindow.g.i.cs" />
+    <Compile Include="BackUp\superMan\superMan\obj\Debug\MessageDialog.g.i.cs" />
+    <Compile Include="BackUp\superMan\superMan\obj\Debug\SampleMessageDialog.g.i.cs" />
+    <Compile Include="BackUp\superMan\superMan\obj\Debug\superMan_Content.g.i.cs" />
+    <Compile Include="BackUp\superMan\superMan\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="BackUp\superMan\superMan\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="BackUp\superMan\superMan\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="BackUp\superMan\superMan\obj\Debug\View\ColorSetting.g.cs" />
+    <Compile Include="BackUp\superMan\superMan\obj\Debug\View\ColorSetting.g.i.cs" />
+    <Compile Include="BackUp\superMan\superMan\obj\Debug\View\FixPriceView.g.cs" />
+    <Compile Include="BackUp\superMan\superMan\obj\Debug\View\FixPriceView.g.i.cs" />
+    <Compile Include="BackUp\superMan\superMan\obj\Debug\View\systemConfigs.g.cs" />
+    <Compile Include="BackUp\superMan\superMan\obj\Debug\View\systemConfigs.g.i.cs" />
+    <Compile Include="BackUp\superMan\superMan\Properties\AssemblyInfo.cs" />
+    <Compile Include="BackUp\superMan\superMan\Properties\Resources.Designer.cs" />
+    <Compile Include="BackUp\superMan\superMan\Properties\Settings.Designer.cs" />
+    <Compile Include="BackUp\superMan\superMan\View\ColorSetting.xaml.cs">
+      <DependentUpon>ColorSetting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BackUp\superMan\superMan\View\FixPriceView.xaml.cs">
+      <DependentUpon>FixPriceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BackUp\superMan\superMan\View\systemConfigs.xaml.cs">
+      <DependentUpon>systemConfigs.xaml</DependentUpon>
+    </Compile>
     <Compile Include="common\HttpHelper.cs" />
     <Compile Include="common\JsonCallbackAttribute.cs" />
     <Compile Include="common\Log4netManager.cs" />
@@ -226,6 +287,35 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="BackUp\Super.Website.Core\Super.Website.Core.sln" />
+    <Content Include="BackUp\Super.Website.Core\Super.Website.Core\bin\Debug\netcoreapp2.0\Super.Website.Core.dll" />
+    <Content Include="BackUp\Super.Website.Core\Super.Website.Core\bin\Debug\netcoreapp2.0\Super.Website.Core.pdb" />
+    <Content Include="BackUp\Super.Website.Core\Super.Website.Core\obj\Debug\netcoreapp2.0\Super.Website.Core.csproj.FileListAbsolute.txt" />
+    <Content Include="BackUp\Super.Website.Core\Super.Website.Core\obj\Debug\netcoreapp2.0\Super.Website.Core.dll" />
+    <Content Include="BackUp\Super.Website.Core\Super.Website.Core\obj\Debug\netcoreapp2.0\Super.Website.Core.pdb" />
+    <Content Include="BackUp\Super.Website.Core\Super.Website.Core\Super.Website.Core.csproj" />
+    <Content Include="BackUp\Super.Website.Core\Super.Website.Core\Super.Website.Core.csproj.user" />
+    <Content Include="BackUp\superMan\superMan.sln" />
+    <Content Include="BackUp\superMan\superMan\bin\Debug\Dragablz.dll" />
+    <Content Include="BackUp\superMan\superMan\bin\Debug\MahApps.Metro.dll" />
+    <Content Include="BackUp\superMan\superMan\bin\Debug\MaterialDesignColors.dll" />
+    <Content Include="BackUp\superMan\superMan\bin\Debug\MaterialDesignThemes.Wpf.dll" />
+    <Content Include="BackUp\superMan\superMan\bin\Debug\MySql.Data.dll" />
+    <Content Include="BackUp\superMan\superMan\bin\Debug\superMan.exe" />
+    <Content Include="BackUp\superMan\superMan\bin\Debug\superMan.pdb" />
+    <Content Include="BackUp\superMan\superMan\bin\Debug\System.Windows.Interactivity.dll" />
+    <Content Include="BackUp\superMan\superMan\libs\Dragablz.dll" />
+    <Content Include="BackUp\superMan\superMan\libs\MahApps.Metro.dll" />
+    <Content Include="BackUp\superMan\superMan\libs\MaterialDesignColors.dll" />
+    <Content Include="BackUp\superMan\superMan\libs\MaterialDesignThemes.Wpf.dll" />
+    <Content Include="BackUp\superMan\superMan\libs\MySql.Data.dll" />
+    <Content Include="BackUp\superMan\superMan\libs\System.Windows.Interactivity.dll" />
+    <Content Include="BackUp\superMan\superMan\logo.ico" />
+    <Content Include="BackUp\superMan\superMan\obj\Debug\superMan.csproj.FileListAbsolute.txt" />
+    <Content Include="BackUp\superMan\superMan\obj\Debug\superMan.exe" />
+    <Content Include="BackUp\superMan\superMan\obj\Debug\superMan.pdb" />
+    <Content Include="BackUp\superMan\superMan\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="BackUp\superMan\superMan\superMan.csproj" />
     <Content Include="BackUp\super\app.js" />
     <Content Include="BackUp\super\image\battery.png" />
     <Content Include="BackUp\super\image\button.png" />
@@ -386,6 +476,39 @@
     <Content Include="BackUp\super\project.config.json" />
     <Content Include="BackUp\价格设置\WorkTime.exe.config" />
     <Content Include="BackUp\价格设置\超人修设置.lnk" />
+    <Content Include="BackUp\superMan\superMan\App.config" />
+    <Content Include="BackUp\superMan\superMan\bin\Debug\superMan.exe.config" />
+    <Content Include="BackUp\superMan\superMan\obj\Debug\App.baml" />
+    <Content Include="BackUp\superMan\superMan\obj\Debug\Common\MessageDialog.baml" />
+    <Content Include="BackUp\superMan\superMan\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <Content Include="BackUp\superMan\superMan\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="BackUp\superMan\superMan\obj\Debug\MainWindow.baml" />
+    <Content Include="BackUp\superMan\superMan\obj\Debug\superMan.csproj.CopyComplete" />
+    <Content Include="BackUp\superMan\superMan\obj\Debug\superMan.csproj.CoreCompileInputs.cache" />
+    <Content Include="BackUp\superMan\superMan\obj\Debug\superMan.csproj.GenerateResource.cache" />
+    <Content Include="BackUp\superMan\superMan\obj\Debug\superMan.csprojAssemblyReference.cache" />
+    <Content Include="BackUp\superMan\superMan\obj\Debug\superMan_MarkupCompile.cache" />
+    <Content Include="BackUp\superMan\superMan\obj\Debug\superMan_MarkupCompile.i.cache" />
+    <Content Include="BackUp\superMan\superMan\obj\Debug\superMan_MarkupCompile.i.lref" />
+    <Content Include="BackUp\superMan\superMan\obj\Debug\superMan_MarkupCompile.lref" />
+    <Content Include="BackUp\superMan\superMan\obj\Debug\View\ColorSetting.baml" />
+    <Content Include="BackUp\superMan\superMan\obj\Debug\View\FixPriceView.baml" />
+    <Content Include="BackUp\superMan\superMan\obj\Debug\View\systemConfigs.baml" />
+    <Content Include="BackUp\Super.Website.Core\Super.Website.Core\appsettings.Development.json" />
+    <Content Include="BackUp\Super.Website.Core\Super.Website.Core\appsettings.json" />
+    <Content Include="BackUp\Super.Website.Core\Super.Website.Core\bin\Debug\netcoreapp2.0\Super.Website.Core.deps.json" />
+    <Content Include="BackUp\Super.Website.Core\Super.Website.Core\bin\Debug\netcoreapp2.0\Super.Website.Core.runtimeconfig.dev.json" />
+    <Content Include="BackUp\Super.Website.Core\Super.Website.Core\bin\Debug\netcoreapp2.0\Super.Website.Core.runtimeconfig.json" />
+    <Content Include="BackUp\Super.Website.Core\Super.Website.Core\obj\Debug\netcoreapp2.0\Super.Website.Core.AssemblyInfoInputs.cache" />
+    <Content Include="BackUp\Super.Website.Core\Super.Website.Core\obj\Debug\netcoreapp2.0\Super.Website.Core.assets.cache" />
+    <Content Include="BackUp\Super.Website.Core\Super.Website.Core\obj\Debug\netcoreapp2.0\Super.Website.Core.csproj.CoreCompileInputs.cache" />
+    <Content Include="BackUp\Super.Website.Core\Super.Website.Core\obj\Debug\netcoreapp2.0\Super.Website.Core.csprojAssemblyReference.cache" />
+    <Content Include="BackUp\Super.Website.Core\Super.Website.Core\obj\project.assets.json" />
+    <Content Include="BackUp\Super.Website.Core\Super.Website.Core\obj\Super.Website.Core.csproj.nuget.cache" />
+    <Content Include="BackUp\Super.Website.Core\Super.Website.Core\obj\Super.Website.Core.csproj.nuget.g.props" />
+    <Content Include="BackUp\Super.Website.Core\Super.Website.Core\obj\Super.Website.Core.csproj.nuget.g.targets" />
+    <Content Include="BackUp\Super.Website.Core\Super.Website.Core\Properties\launchSettings.json" />
+    <None Include="BackUp\superMan\superMan\Properties\Settings.settings" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -449,6 +572,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="BackUp\Super.Website.Core\Super.Website.Core\wwwroot\" />
+    <Folder Include="BackUp\superMan\superMan\bin\Release\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -458,6 +583,37 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="BackUp\superMan\superMan\App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BackUp\superMan\superMan\Common\MessageDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BackUp\superMan\superMan\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BackUp\superMan\superMan\View\ColorSetting.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BackUp\superMan\superMan\View\FixPriceView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BackUp\superMan\superMan\View\systemConfigs.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BackUp\superMan\superMan\obj\Debug\superMan.g.resources" />
+    <EmbeddedResource Include="BackUp\superMan\superMan\obj\Debug\superMan.Properties.Resources.resources" />
+    <EmbeddedResource Include="BackUp\superMan\superMan\Properties\Resources.resx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
