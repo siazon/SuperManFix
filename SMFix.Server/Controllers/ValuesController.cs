@@ -18,6 +18,7 @@ namespace SMFix.Server.Controllers
         // GET api/values/5
         public string Get(int id)
         {
+            // 分支q
             return "value";
         }
 
@@ -37,6 +38,7 @@ namespace SMFix.Server.Controllers
         // DELETE api/values/5
         public void Delete(int id)
         {
+            // 分支q
         }
     }
 }
