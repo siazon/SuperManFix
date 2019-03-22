@@ -1,0 +1,225 @@
+<!--userinfo.wxml-->
+
+
+<text class="title">维修方式</text>
+<view class='seType'>
+  <view class="btnLab-cell" style="flex-direction:row;  display: flex;  background:white; ">
+    <view class="btnLab-wx" style="  border-bottom:1rpx solid #888888; margin:20rpx 74rpx; display: flex; flex-direction: column; align-items: center; ">
+      <image src="{{doorimg}}" style=" width:100rpx; height: 100rpx;  " data-name="door" bindtap="doorclick"></image>
+      <label style=" fore-color:blue;  font-size:12px;  display: flex;">{{doorFix}}</label>
+    </view>
+    <label style="width:3rpx;height:150rpx; background:#eee"></label>
+    <view class="btnLab-wx" style=" border-bottom:1rpx solid #888888; margin:20rpx 74rpx ; display: flex; flex-direction: column; align-items: center; ">
+      <image src="{{shopimg}}" style=" width:100rpx; height: 100rpx; " data-name="shop" bindtap="shopclick"></image>
+      <label style=" fore-color:blue;  font-size:12px;  display: flex;">到店</label>
+    </view>
+    <label style="width:3rpx;height:150rpx; background:#eee"></label>
+    <view class="btnLab-wx" style=" border-bottom:1rpx solid #888888; margin:20rpx 74rpx ; display: flex; flex-direction: column; align-items: center; ">
+      <image src="{{postimg}}" style=" width:100rpx; height: 100rpx;  " data-name="post" bindtap="postclick"></image>
+      <label style=" fore-color:blue;  font-size:12px;  display: flex;">邮寄</label>
+    </view>
+
+  </view>
+</view>
+<form bindsubmit="formSubmit">
+  <view class="info_item">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input name="UserName" class="weui-input" placeholder="请输入您的姓名" />
+      </view>
+    </view>
+  </view>
+  <view class="info_item">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input name='Phone' bindinput='phone_input' maxlength='11' class="weui-input" placeholder="请输入您常用的手机号码" />
+        <text class="getCode" bindtap="GetCode">{{CodeCaption}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="info_item">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input name='Code' class="weui-input" placeholder="请输入短信验证码" />
+      </view>
+    </view>
+  </view>
+
+  <view wx:if="{{isdoor}}">
+    <view class="info_item">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">服务城市：</view>
+          </view>
+          <view class="weui-cell__bd">
+            <picker bindchange="bindcityChange" value="{{cityIndex}}" range="{{servicecity}}">
+              <view class="weui-input">{{servicecity[cityIndex]}}</view>
+            </picker>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="info_item">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">服务区域：</view>
+          </view>
+          <view class="weui-cell__bd">
+            <picker bindchange="bindDisChange" value="{{districtIndex}}" range="{{district}}">
+              <view class="weui-input">{{district[districtIndex]}}</view>
+            </picker>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="info_item">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input name='addrDetail' class="weui-input" placeholder="请输入街道小区门牌号" />
+        </view>
+      </view>
+    </view>
+
+
+  </view>
+  <view wx:if="{{ispost}}">
+    <label class='tab'>寄修收件地址：</label>
+    <view class=" info_item" wx:if="{{false}}">
+      <view class=" weui-cells weui-cells_after-title">
+        <view class=" weui-cell weui-cell_input">
+          <view class=" weui-cell__hd">
+            <view class=" weui-label">寄修收件地址：</view>
+          </view>
+          <view class="weui-cell__bd">
+            <picker bindchange="bindaddrnameChange" value="{{postaddrIndex}}" range="{{postaddrs}}">
+              <view class="weui-input">{{postaddrs[postaddrIndex]}}</view>
+            </picker>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="pAddr info_item">
+      <view class="weui-cells weui-cells_after-title">
+        <view class=" weui-cell weui-cell_input">
+          <text name='postAddr' type="text" selectable='true' class="area-item weui-input">{{postaddr}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="info_item">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">回寄地址：</view>
+          </view>
+          <view class="weui-cell__bd">
+            <view class="weui-input" bindtap="selectDistrict">{{areaInfo}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="info_item">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input name='backPostAddr' class="weui-input" placeholder="请输入回寄地址街道小区门牌号" />
+        </view>
+      </view>
+    </view>
+    <view class="dialog-mask " style="z-index:11;visibility:{{addressMenuIsShow ? 'visible': 'hidden'}}" bindtap="hideCitySelected" />
+    <!--城市三级联动-->
+    <!--使用动画时不能wx:if="{{city.length>0&&isVisible}}" ，不能hidden=''属性否则无动画效果-->
+    <view class="picker-view" animation="{{animationAddressMenu}}" style="visibility:{{addressMenuIsShow ? 'visible':'hidden'}}">
+      <view style="height:10% ;width:95%;margin-top:10rpx">
+        <text catchtap="cityCancel">取消</text>
+        <text style="float: right" catchtap="citySure">确定</text>
+      </view>
+      <!--"可以显示默认的城市，使用后级联选择城市反应很慢就不使用了-->
+      <picker-view style="width: 100%; height: 300px;" bindchange="cityChange" value="{{value}}" wx:key="">
+        <picker-view-column>
+          <view wx:for="{{provinces}}" class="picker-item">
+            {{item.name}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{citys}}" class="picker-item" wx:key="">
+            {{item.name}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{areas}}" class="picker-item" wx:key="">
+            {{item.name}}</view>
+        </picker-view-column>
+      </picker-view>
+    </view>
+
+  </view>
+ 
+
+
+  <view wx:if="{{isdoor||isshop}}" class="info_item">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">{{isdoor?"服务日期:":"预约日期:"}}</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+            <view class="weui-input">{{date}}</view>
+          </picker>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view wx:if="{{isdoor||isshop}}" class="info_item">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">{{isdoor?"服务时间:":"预约时间:"}}</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker mode="time" value="{{time}}" start="09:00" end="18:00" bindchange="bindTimeChange">
+            <view class="weui-input">{{time}}</view>
+          </picker>
+        </view>
+      </view>
+    </view>
+  </view>
+ <view wx:if="{{isshop}}">
+    <view class="info_item">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">门店地址：</view>
+          </view>
+          <view class="weui-cell__bd">
+            <picker bindchange="bindshopaddrChange" value="{{shopaddrindex}}" range="{{shopAddrs}}">
+              <view class="weui-input">{{shopAddrs[shopaddrindex]}}</view>
+              <!--
+              <image class='down' src='/image/more_unfold.png'></image>-->
+            </picker>
+          </view>
+        </view>
+      </view>
+    </view>
+ 
+
+  </view>
+   <view wx:if="{{isshop}}">
+      <map class="map" wx:if="{{showMap}}" longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}" scale="18" style="width: 100%; height: 100px;" bindtap="mapclick">
+      </map>
+
+    </view>
+
+  <view class="info_item">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input name='Remark' class="weui-input" placeholder="请输入备注信息" />
+
+      </view>
+    </view>
+  </view>
+  <button class="btnSubmit" form-type='submit' bindtap="btnSubmit_click">提交订单</button>
+  <label class='line'>11</label>
+</form>

@@ -1,0 +1,77 @@
+<import src="/page/temp/Temp.wxml" />
+
+<view class="main" style="background:#f0f0f6">
+  <swiper class="swp" indicator-dots="true" autoplay="true" interval="{{interval}}" duration="{{duration}}" circular="true">
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="100%" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <!--
+  <label class="line" style="background:#888888;"></label>
+  <view style="height:150rpx;display: flex; flex-direction: column; align-items: center; background:white;">
+    <view style=" border:1rpx solid #888888; box-shadow: 3rpx 3rpx 2rpx #888888; border-radius: 50%; margin:-140rpx 0rpx; width:280rpx; height:280rpx">
+      <image style="width:230rpx;height:230rpx; margin:80rpx 0rpx 0rpx 20rpx;" mode="aspectFit" src='/image/logo02.png'></image>
+    </view>
+  </view>-->
+
+  <view class="btnLab-cell" style="flex-direction:row;  display: flex;  background:white; ">
+    <view class="btnLab-wx" style="  border-bottom:1rpx solid #888888; margin:20rpx 45rpx 20rpx 50rpx ; display: flex; flex-direction: column; align-items: center; ">
+      <image src="/image/repair.png" style=" width:150rpx; height: 150rpx;  border-radius: 50%; " bindtap="onclick"></image>
+      <label style=" fore-color:blue;  font-size:12px;  display: flex;">维修查价</label>
+    </view>
+    <label style="width:3rpx;height:250rpx; background:#eee"></label>
+    <view class="btnLab-wx" style=" border-bottom:1rpx solid #888888; margin:20rpx 45rpx ; display: flex; flex-direction: column; align-items: center; ">
+      <image src="/image/telSuper.jpg" style=" width:150rpx; height: 150rpx;  border-radius: 50%; " bindtap="onmackcall"></image>
+      <label style=" fore-color:blue;  font-size:12px;  display: flex;">电话咨询</label>
+    </view>
+    <label style="width:3rpx;height:250rpx; background:#eee"></label>
+    <view class="btnLab-wx" style=" border-bottom:1rpx solid #888888; margin:20rpx 45rpx ; display: flex; flex-direction: column; align-items: center; ">
+      <image src="/image/up.png" style=" width:150rpx; height: 150rpx;  border-radius: 50%; " bindtap="Up_Click"></image>
+      <label style=" fore-color:blue;  font-size:12px;  display: flex;">内存升级</label>
+    </view>
+  </view>
+
+  <view style=" display: flex; align-items: center; flex-direction: column;background:white;">
+    <button class="btn" size="default" bindtap="onclick">维修下单</button>
+  </view>
+  <view style=" margin:-30rpx 0 0 0; display: flex; align-items: center; flex-direction: column;background:white;">
+    <button class="btnr" size="default" bindtap="onReclick">手机回收</button>
+  </view>
+
+  <view style="display:flex;flex-direction:column; background:white; margin:20rpx 0rpx 0rpx 0rpx;">
+    <view class="btnLab-cell" style="flex-direction:row;  display: flex;  ">
+      <template is="btnLab" data="{{...find.LB_screen}}" />
+      <template is="btnLab" data="{{...find.LB_button}}" />
+      <template is="btnLab" data="{{...find.LB_camera}}" />
+      <template is="btnLab" data="{{...find.LB_battery}}" />
+    </view>
+    <view class="btnLab-cell" style="flex-direction:row;  display: flex;   ">
+      <template is="btnLab" data="{{...find.LB_speaker}}" />
+      <template is="btnLab" data="{{...find.LB_sell}}" />
+      <template is="btnLab" data="{{...find.LB_respond}}" />
+      <template is="btnLab" data="{{...find.LB_other}}" />
+    </view>
+    <view style=" display: flex; align-items: center; flex-direction: column;">
+      <button class="btn" size="default" bindtap="query_Click">订单查询</button>
+    </view>
+  </view>
+  <view class="olist">
+    <view class="otitle">实时订单</view>
+    <block wx:for="{{orderlist}}" wx:key="index">
+      <template is="OrderList" data="{{...item}}" />
+    </block>
+  </view>
+  <view class="help">
+
+    <label class="btnLab-wx" bindtap="Service_Click">服务流程</label>
+
+    <label class="btnLab-wx" bindtap="btnFeedback_Click">意见反馈</label>
+
+    <label class="btnLab-wx" bindtap="QA_Click">常见问题</label>
+
+    <label class="btnLab-wx" bindtap="btnHelp_Click">关于我们</label>
+  </view>
+  <view class="ps">超人修 浙ICP备 16015742号-1</view>
+</view>

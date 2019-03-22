@@ -1,0 +1,20 @@
+/* feedback.wxss */
+
+@import "/common/weui.wxss";
+.main_input{
+  background: white;
+  height: 600rpx;
+  width: auto;
+ padding: 20rpx;
+
+}
+.Submit{
+margin: 30rpx 50rpx;
+}
+.form{
+
+  background: white;
+}
+.phone{
+    margin-top: 30rpx;
+}

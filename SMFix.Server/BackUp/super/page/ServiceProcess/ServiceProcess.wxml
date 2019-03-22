@@ -1,0 +1,45 @@
+<!--ServiceProcess.wxml-->
+<import src="/page/temp/Temp.wxml" />
+
+<view  wx:if="{{ProType>0}}">
+<view class="title_border">
+  <view   class="title">上门回收流程</view>
+</view>
+
+
+<block wx:for="{{processRe}}" wx:key="index">
+  <template is="process" data="{{...item}}" />
+</block>
+</view>
+<view  wx:if="{{ProType<1}}">
+<view class="title_border">
+  <view   class="title">一.上门维修流程</view>
+</view>
+
+
+<block wx:for="{{process}}" wx:key="index">
+  <template is="process" data="{{...item}}" />
+</block>
+
+<view class="con">
+  <view class="title_border">
+    <view class="title">二.到店维修流程</view>
+  </view>
+
+  <block wx:for="{{process1}}" wx:key="index">
+    <template is="process" data="{{...item}}" />
+  </block>
+
+</view>
+
+<view class="con1">
+  <view class="title_border">
+    <view class="title">三.全国邮寄维修</view>
+  </view>
+
+  <block wx:for="{{process2}}" wx:key="index">
+    <template is="process" data="{{...item}}" />
+  </block>
+
+</view>
+</view>

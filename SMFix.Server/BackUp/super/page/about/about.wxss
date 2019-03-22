@@ -1,0 +1,38 @@
+/* about.wxss */
+.about-page{
+  background: white;
+}
+.title {
+    background: white;
+  font-size: 50rpx;
+  font-weight: bold;
+  text-align: center;
+  padding:  60rpx 40rpx 40rpx 40rpx;
+  
+}
+
+.first {
+    background: white;
+  padding:  20rpx 20rpx 20rpx 70rpx;
+}
+.nom{
+  background: white;
+  padding:  10rpx 20rpx;
+  word-break: break-all
+}
+.pwd{
+  margin: 20rpx 0 0 0;
+    background: white;
+    padding:  10rpx 20rpx 40rpx 20rpx;
+   
+}
+.weui-input{
+  height: 80rpx;
+   border: 5rpx solid #dedede;
+  border-radius: 20rpx; 
+    padding: 0  20rpx  ;
+}
+.btn{
+
+  margin: 20rpx 0 0 0;
+}

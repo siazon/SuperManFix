@@ -1,0 +1,57 @@
+/* ServiceProcess.wxss */
+
+.title {
+  background: #db413f;
+  text-align: center;
+  padding: 20rpx;
+  color: white;
+  font-size: 40rpx;
+}
+
+.title_border {
+  background: white;
+  margin: 30rpx 180rpx;
+  padding: 10rpx;
+  border: 1px solid #db413f;
+}
+
+
+.seq {
+  background: black;
+  text-align: center;
+  color: white;
+  display: inline;
+  border-radius: 50%;
+  min-width: 90rpx;
+  min-height: 90rpx;
+  padding: 8rpx 20rpx;
+}
+
+.seq_border {
+  display: inline;
+  background: white;
+  margin: 20rpx;
+  padding: 15rpx 7rpx;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+.line{
+  border: 1px solid gray;
+  height: 30rpx;
+  width: 1rpx;
+  display: block;
+  margin: 10rpx 55rpx ;
+}
+.title_s{
+  font-weight: bold;
+  display: inline-flex;
+  margin: 0 0 15rpx 0;
+  font-size: 37rpx;
+}
+.con{
+  display: block;
+  margin: 1200rpx 0 0 0;
+}
+.con1{
+   margin: 940rpx 0 0 0;
+}

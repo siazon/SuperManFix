@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "page/index",
+    "page/recyclePro/recyclePro",
+    "page/userinfo/userinfo",
+    "page/about/about",
+    "page/RAMFix/RAMFix",
+    "page/bland/bland",
+    "page/query/query",
+    "page/order/order",
+    "page/succeed/succeed",
+    "page/serviceterms/serviceterms",
+    "page/feedback/feedback",
+    "page/QAndA/QAndA",
+    "page/RAMUp/RAMUp",
+    "page/ServiceProcess/ServiceProcess",
+    "page/recycle/recycle"
+  ],
+  "window": {
+    "navigationBarTextStyle": "#ffffff",
+    "navigationBarTitleText": "超人修",
+    "navigationBarBackgroundColor": "#353639",
+    "backgroundColor": "#eeeeee",
+    "enablePullDownRefresh": false
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

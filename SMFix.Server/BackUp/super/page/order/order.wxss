@@ -1,0 +1,100 @@
+/* order.wxss */
+page {
+  background-color: #f0f0f6;
+  height: 100%;
+  width: auto;
+}
+.title {
+  margin: 10rpx;
+}
+
+.ver_con {
+  position: relative;
+}
+
+.ver {
+  width: auto;
+  height: 90rpx;
+  line-height: 90rpx;
+  background: white;
+  text-align: center;
+}
+
+.conent {
+  width: auto;
+  background: white;
+}
+
+.ps_connect {
+  width: 100%;
+  background: white;
+}
+
+.connect_ps_title {
+  width: auto;
+  line-height: 60rpx;
+  padding: 20rpx;
+  color: #777;
+  font-size: 13px;
+}
+
+.connect_ps {
+  width: auto;
+  line-height: 45rpx;
+  padding: 10rpx 20rpx 20rpx 20rpx;
+  color: #777;
+  font-size: 13px;
+}
+
+.order_item {
+  width: auto;
+  line-height: 90rpx;
+  padding: 0 40rpx 0 20rpx;
+  box-sizing: border-box;
+}
+
+.order_price {
+  position: initial;
+  float: right;
+}
+
+.summry {
+  width: auto;
+  background: white;
+  line-height: 45rpx;
+  padding: 20rpx 0 0 10rpx;
+  color: #777;
+  font-size: 13px;
+}
+
+.summry_itme {
+  width: auto;
+  background: white;
+  line-height: 45rpx;
+  padding: 0 20rpx 0 10rpx;
+  color: #777;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+.summry_right {
+  position: initial;
+  float: right;
+  font-weight: bold;
+}
+
+.price_right {
+  position: initial;
+  float: right;
+  color: red;
+  font-weight: bold;
+}
+
+.fw {
+  color: lightgreen;
+}
+.btnSubmit{
+  margin: 20rpx 50rpx 50rpx 50rpx;
+  background: #db423f;
+  color: white;
+}

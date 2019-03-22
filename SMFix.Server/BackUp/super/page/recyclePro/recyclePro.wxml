@@ -1,0 +1,68 @@
+<!--page/recyclePro/recyclePro.wxml-->
+<import src="/page/temp/Temp.wxml" />
+
+<!--<view class="header">
+    <image src="{{thumb}}" class="thumb"></image>
+    <text class="nickname">{{nickname}}</text>
+    <text class="about">关于我们</text>
+  </view>-->
+
+<view class="search">
+
+ 
+  <radio-group class="group" bindchange="radioChange">
+    <radio value='1' checked='true'>维修</radio>
+    <radio value='2'>回收</radio>
+    <radio value='3'>反馈</radio>
+  </radio-group>
+  <view class='tb_date'>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">开始时间：</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker mode="date" value="{{sdate}}" bindchange="sbindDateChange">
+            <view class="weui-input">{{sdate}}</view>
+          </picker>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='tb_date'>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">结束时间：</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker mode="date" value="{{edate}}" bindchange="ebindDateChange">
+            <view class="weui-input">{{edate}}</view>
+          </picker>
+        </view>
+      </view>
+    </view>
+  </view>
+ <view class="btnquery info_item">
+    <input class="weui-input" type="text" bindblur="phone_input" placeholder="模糊查询" />
+    <image class="iconQuery" src="/image/query.png" bindtap="btnQuery_Click"></image>
+  </view>
+</view>
+<view class="orders-box" wx:if="{{queryType==1}}">
+  <view class="orders">{{listTitle}}</view>
+  <block wx:for="{{orders}}" wx:key="index">
+    <template is="query_list" data="{{...item}}" />
+  </block>
+</view>
+<view class="orders-box" wx:if="{{queryType==2}}">
+  <view class="orders">{{listTitle}}</view>
+  <block wx:for="{{Reorders}}" wx:key="index">
+    <template is="recycleList" data="{{...item}}" />
+  </block>
+</view>
+<view class="orders-box" wx:if="{{queryType==3}}">
+  <view class="orders">{{listTitle}}</view>
+  <block wx:for="{{Reorders}}" wx:key="index">
+    <template is="feedback" data="{{...item}}" />
+  </block>
+</view>
