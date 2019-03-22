@@ -1,0 +1,73 @@
+﻿<UserControl x:Class="superMan.View.ColorSetting"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:superMan.View"
+             mc:Ignorable="d" 
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <DataTemplate x:Key="BlandTemp">
+            <Button Content="删除" Tag="{Binding}" Width="80" Click="Button_Click"  />
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="260"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition  Width="auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <TextBox x:Name="txtPWD" FontSize="20" Foreground="White" md:HintAssist.Hint="工程师口令" Width="120" Text="{Binding RAMFix.sortIndex}"
+                  Margin="3 0 3 0" />
+            <Button Margin="5" Click="btnQuery_Click">查询</Button>
+            <Button Margin="5" Click="btnEdti_Click">修改</Button>
+        </StackPanel>
+        <Button Grid.Row="1" Margin="20 5 5 5" Width="130" HorizontalAlignment="Right" Click="btnQueryUser_Click">刷新授权微信</Button>
+        <DataGrid Grid.Column="0" Grid.Row="4" ItemsSource="{Binding User,Mode=TwoWay}"  CanUserAddRows="False" IsReadOnly="True" 
+                     SelectedValue="{Binding SelectUser}" AutoGenerateColumns="False" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding nickName}" Header="微信名称" Width="30*" />
+                <DataGridTemplateColumn CellTemplate="{StaticResource BlandTemp}" Header="操作"  Width="30*" ></DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <GridSplitter Grid.Row="0" Grid.Column="1" Grid.RowSpan="9" Width="3" Margin="2,0,2,0" Background="White" 
+                      VerticalAlignment="Stretch" HorizontalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal"  Grid.Column="3">
+            <TextBox x:Name="txtName" FontSize="20" Foreground="White" md:HintAssist.Hint="姓名"  Text="{Binding SelectPush.name}"
+                  Margin="3 0 3 0" />
+            <TextBox x:Name="txtPhone" FontSize="20" Foreground="White" md:HintAssist.Hint="推送手机"  Text="{Binding SelectPush.Phone}"
+                  Margin="3 0 3 0" />
+        </StackPanel>
+        <StackPanel Grid.Column="3" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Margin="5" Click="btnRefresh_Click">刷新</Button>
+            <Button Margin="5" Click="btnAdd_Click">新增</Button>
+            <Button Margin="5" Click="btnEditPush_Click">修改</Button>
+            <Button Margin="5" Click="btnDelete_Click">删除</Button>
+        </StackPanel>
+        <DataGrid Grid.Column="2" Width="300" Grid.Row="0" Grid.RowSpan="3" ItemsSource="{Binding PushUser,Mode=TwoWay}"  CanUserAddRows="False" IsReadOnly="True" 
+                     SelectedValue="{Binding SelectPush}" AutoGenerateColumns="False" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding name}" Header="姓名" Width="30*" />
+                <DataGridTextColumn Binding="{Binding Phone}" Header="推送手机" Width="30*" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel x:Name="panChe" Grid.Row="3" Grid.Column="3" Grid.RowSpan="3">
+            <CheckBox FontSize="20" Foreground="White" Margin="5" IsChecked="{Binding Chk1}">内存升级上门</CheckBox>
+            <CheckBox FontSize="20" Foreground="White" Margin="5" IsChecked="{Binding Chk2}">内存升级邮寄</CheckBox>
+            <CheckBox FontSize="20" Foreground="White" Margin="5" IsChecked="{Binding Chk4}">内存升级到店</CheckBox>
+            <CheckBox FontSize="20" Foreground="White" Margin="5" IsChecked="{Binding Chk8}">维修上门</CheckBox>
+            <CheckBox FontSize="20" Foreground="White" Margin="5" IsChecked="{Binding Chk16}">维修邮寄</CheckBox>
+            <CheckBox FontSize="20" Foreground="White" Margin="5" IsChecked="{Binding Chk32}">维修到店</CheckBox>
+            <CheckBox FontSize="20" Foreground="White" Margin="5" IsChecked="{Binding Chk64}">手机回收</CheckBox>
+        </StackPanel>
+    </Grid>
+</UserControl>

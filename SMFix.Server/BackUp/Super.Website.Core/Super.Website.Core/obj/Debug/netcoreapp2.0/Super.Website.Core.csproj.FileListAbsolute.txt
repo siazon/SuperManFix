@@ -1,0 +1,11 @@
+D:\web\super\Super.Website.Core\Super.Website.Core\bin\Debug\netcoreapp2.0\Super.Website.Core.deps.json
+D:\web\super\Super.Website.Core\Super.Website.Core\bin\Debug\netcoreapp2.0\Super.Website.Core.runtimeconfig.json
+D:\web\super\Super.Website.Core\Super.Website.Core\bin\Debug\netcoreapp2.0\Super.Website.Core.runtimeconfig.dev.json
+D:\web\super\Super.Website.Core\Super.Website.Core\bin\Debug\netcoreapp2.0\Super.Website.Core.dll
+D:\web\super\Super.Website.Core\Super.Website.Core\obj\Debug\netcoreapp2.0\Super.Website.Core.csproj.CoreCompileInputs.cache
+D:\web\super\Super.Website.Core\Super.Website.Core\obj\Debug\netcoreapp2.0\Super.Website.Core.AssemblyInfoInputs.cache
+D:\web\super\Super.Website.Core\Super.Website.Core\obj\Debug\netcoreapp2.0\Super.Website.Core.AssemblyInfo.cs
+D:\web\super\Super.Website.Core\Super.Website.Core\bin\Debug\netcoreapp2.0\Super.Website.Core.pdb
+D:\web\super\Super.Website.Core\Super.Website.Core\obj\Debug\netcoreapp2.0\Super.Website.Core.dll
+D:\web\super\Super.Website.Core\Super.Website.Core\obj\Debug\netcoreapp2.0\Super.Website.Core.pdb
+D:\web\super\Super.Website.Core\Super.Website.Core\obj\Debug\netcoreapp2.0\Super.Website.Core.csprojAssemblyReference.cache

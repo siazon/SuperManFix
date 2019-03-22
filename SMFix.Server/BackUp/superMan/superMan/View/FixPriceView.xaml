@@ -1,0 +1,160 @@
+﻿<UserControl x:Class="superMan.View.FixPriceView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:superMan.View"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             mc:Ignorable="d" >
+    <UserControl.Resources>
+        <DataTemplate x:Key="BlandTemp">
+            <TextBlock Text="{Binding sjpp}" Tag="{Binding}"  Foreground="White"  />
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid x:Name="Mgrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="3"/>
+            <ColumnDefinition Width="360"/>
+        </Grid.ColumnDefinitions>
+        <Border BorderBrush="White" BorderThickness="0 0 1 0">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="108*"/>
+                <RowDefinition Height="10"/>
+            </Grid.RowDefinitions>
+            <Grid Row="0" ColumnSpan="3" Column="0"  Margin="3 0 3 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="50*"/>
+                </Grid.ColumnDefinitions>
+                <ComboBox x:Name="cbBland"  Foreground="White" md:HintAssist.Hint="品牌" IsEditable="False" Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                SelectionChanged="cbBland_SelectionChanged"  ItemsSource="{Binding Blands, Mode=TwoWay}"  Margin="3 0 3 0" />
+
+                <ComboBox x:Name="cbVer" Foreground="White" Grid.Column="1"  md:HintAssist.Hint="型号" IsEditable="False" Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                SelectionChanged="cbVer_SelectionChanged"  ItemsSource="{Binding Vers, Mode=TwoWay}" Margin="3 0 3 0" />
+                <ComboBox x:Name="cbfixType" Foreground="White" Grid.Column="2"  md:HintAssist.Hint="故障类型" IsEditable="False" Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                SelectionChanged="cbfixType_SelectionChanged"  ItemsSource="{Binding FixTypes, Mode=TwoWay}" Margin="3 0 3 0"/>
+                <ComboBox x:Name="cbfix" Foreground="White" Grid.Column="3"  md:HintAssist.Hint="故障" IsEditable="False" Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                 SelectionChanged="cbfix_SelectionChanged"  ItemsSource="{Binding Fixs, Mode=TwoWay}" Margin="3 0 3 0" />
+                <Button Grid.Column="4" Width="100" Style="{StaticResource MaterialDesignRaisedDarkButton}" Click="ClearSelect_Click"  Content="刷新数据" Margin="0,4"/>
+
+            </Grid>
+            <Grid  Row="1" ColumnSpan="3" Grid.Column="0">
+                <StackPanel  Height="40" HorizontalAlignment="Right" Margin="0 0 10 0" Orientation="Horizontal">
+                    <Button Width="70" Style="{StaticResource MaterialDesignRaisedDarkButton}" Click="btnQueyr_Click" Content="查询" Margin="5,4"/>
+                    <Button Width="70" Style="{StaticResource MaterialDesignRaisedDarkButton}" Click="btnAdd_Click" Content="新增" Margin="5,4"/>
+                    <Button Width="70" Style="{StaticResource MaterialDesignRaisedDarkButton}" Click="btnEdit_Click" Content="修改" Margin="5,4"/>
+                    <Button Width="70" Style="{StaticResource MaterialDesignRaisedDarkButton}" Click="btnDelete_Click" Content="删除"  Margin="5,4"/>
+                    <Button Content="{md:PackIcon Broom}"    Visibility="Collapsed"                                   
+                     Height="20" Width="20" Padding="0" Margin="10 0"  />
+                </StackPanel>
+            </Grid>
+            <Grid Row="2" ColumnSpan="3" Column="0"  Margin="3 0 3 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="50*"/>
+                </Grid.ColumnDefinitions>
+                <TextBox Foreground="White" md:HintAssist.Hint="品牌" Text="{Binding WXJM.sjpp}"
+                  Margin="3 0 3 0" />
+                <TextBox Foreground="White" Grid.Column="1" md:HintAssist.Hint="型号" Text="{Binding WXJM.sjxh}"
+                  Margin="3 0 3 0" />
+                <TextBox Foreground="White"  Grid.Column="2" md:HintAssist.Hint="故障类型" Text="{Binding WXJM.mklx}"
+                  Margin="3 0 3 0" />
+                <TextBox Foreground="White"  Grid.Column="3" md:HintAssist.Hint="故障" Text="{Binding WXJM.gzlx}"
+                  Margin="3 0 3 0" />
+                <TextBox Foreground="White"  Grid.Column="4" md:HintAssist.Hint="价格" Text="{Binding WXJM.ycjg}"
+                  Margin="3 0 3 0" />
+                <TextBox Foreground="White"  Grid.Column="5" md:HintAssist.Hint="排序" Text="{Binding WXJM.paiXu}"
+                  Margin="3 0 3 0" />
+            </Grid>
+            <Grid Row="3" ColumnSpan="3" Grid.Column="0" >
+                <DataGrid x:Name="grid" ItemsSource="{Binding DataItems,Mode=TwoWay}"  CanUserAddRows="False" IsReadOnly="True" 
+                  SelectionChanged="grid_SelectionChanged"    SelectedValue="{Binding WXJM}" AutoGenerateColumns="False" >
+
+                    <DataGrid.Columns>
+                        <!--<DataGridTemplateColumn Header="品牌" CellTemplate="{StaticResource BlandTemp}" Width="50*" />-->
+                        <DataGridTextColumn Binding="{Binding sjpp}" Header="品牌" Width="50*" />
+                        <DataGridTextColumn Binding="{Binding sjxh}" Header="型号" Width="50*" />
+                        <DataGridTextColumn Binding="{Binding mklx}" Header="故障类型" Width="50*" />
+                        <DataGridTextColumn Binding="{Binding gzlx}" Header="故障" Width="50*" />
+                        <DataGridTextColumn Binding="{Binding ycjg}" Header="价格" Width="50*" />
+                        <DataGridTextColumn Binding="{Binding paiXu}" Header="排序" Width="50*" />
+                    </DataGrid.Columns>
+                    <DataGrid.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="Delete" >
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="Click">
+                                        <i:InvokeCommandAction Command="{Binding DeleteDataGridItemCommand}" CommandParameter="10" />
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                            </MenuItem>
+                        </ContextMenu>
+                    </DataGrid.ContextMenu>
+                </DataGrid>
+            </Grid>
+            <Grid Grid.Row="3" ColumnSpan="3" Grid.Column="0" >
+
+            </Grid>
+
+
+            <md:Snackbar Grid.Row="0" Grid.RowSpan="4" Grid.ColumnSpan="3" MessageQueue="{md:MessageQueue}" IsActive="False"
+                                             x:Name="SnackbarOne" />
+        </Grid>
+        </Border>
+        <GridSplitter Grid.Row="0" Grid.Column="1" Width="3" Margin="2,0,2,0" Background="White" BorderBrush="White" BorderThickness="3"
+                      VerticalAlignment="Stretch" HorizontalAlignment="Center">
+            
+        </GridSplitter>
+
+        <Grid  Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition/>
+
+                </Grid.RowDefinitions>
+                <WrapPanel >
+                    <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center">
+                        <ComboBox x:Name="cbBland1"  Foreground="White" Width="150" md:HintAssist.Hint="品牌" IsEnabled="False" IsEditable="False" Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                 SelectedIndex="{Binding ElementName=cbBland, Path=SelectedIndex}" ItemsSource="{Binding Blands, Mode=TwoWay}"  Margin="3 0 3 0" />
+
+                    <ComboBox x:Name="cbVer1" Foreground="White" Width="150" Grid.Row="1"  IsEnabled="False" md:HintAssist.Hint="型号" IsEditable="False" Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                 SelectedIndex="{Binding ElementName=cbVer, Path=SelectedIndex}" ItemsSource="{Binding Vers, Mode=TwoWay}" Margin="3 0 3 0" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Right">
+                        <Button  Margin="170 5 5 5" Click="btnQuery_Click">刷新</Button>
+                        <Button Margin="5" Click="btnEdit1_Click">修  改</Button>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Grid.Row="3"  HorizontalAlignment="Left">
+                        <TextBox x:Name="txtNewColor" Width="90" FontSize="20" Margin="5 0 0 0" Foreground="White"></TextBox>
+                        <Button Click="btnAdd1_Click">新  增</Button>
+                    <TextBox x:Name="txtDelColor" Width="90" FontSize="20" Margin="5 0 0 0" Foreground="White"></TextBox>
+                        <Button Margin="5" Click="btnDelete1_Click">删  除</Button>
+                    </StackPanel>
+
+                </WrapPanel>
+            <ScrollViewer  Grid.Row="1" BorderBrush="White" BorderThickness="1 0 0 0">
+                <WrapPanel  x:Name="pColors">
+                </WrapPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+
+</UserControl>
