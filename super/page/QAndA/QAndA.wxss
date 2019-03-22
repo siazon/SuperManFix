@@ -1,0 +1,13 @@
+/* Q&A.wxss */
+.main{
+  padding: 20rpx;
+background: white;
+}
+.title{
+  padding: 20rpx 20rpx 20rpx 0;
+
+}
+.content{
+    padding: 0 20rpx 20rpx 0;
+    color: #48c23d;
+}

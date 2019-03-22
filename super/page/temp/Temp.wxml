@@ -1,0 +1,135 @@
+<template name="btnLab">
+  <view class="btnLab-F">
+    <image class="btnLab-Img" src="{{LB_image}}" data-name="{{LB_text}}" bindtap="onclick"></image>
+    <label class="btnLab-Lab">{{LB_text}}</label>
+  </view>
+
+</template>
+
+<template name="TFualts">
+  <view class="fault">
+    <icon type="success" class="gg" />
+    <label>后摄像头</label>
+  </view>
+</template>
+
+<template name="TFaults">
+  <view class="fault" data-name="{{name}}" bindtap="OnFaultSelected">
+    <icon wx:if="{{isSelect}}" type="success" class="gg" />
+    <view class="name">{{name}}</view>
+    <!-- <view class="fomart">￥</view>
+    <view class="price">{{price}}</view>-->
+  </view>
+</template>
+
+<template name="Order_item">
+  <view class="order_item">
+    <text>故障</text>
+    <text>{{index}}</text>
+    <text>：</text>
+    <text>{{fault}}</text>
+    <view class="order_price">
+      <text>￥</text>
+      <text>{{price}}</text>
+    </view>
+  </view>
+</template>
+
+<template name="items">
+  <view class="viewList" data-name="{{name}}" bindtap="onblandSelected">
+    {{name}}
+  </view>
+</template>
+
+<template name="VerItems">
+  <view class="viewList" data-name="{{name}}" bindtap="onMacVerSelected">
+    {{name}}
+  </view>
+</template>
+
+<template name="ColorItems">
+  <view class="viewList" data-name="{{name}}" bindtap="onMacColorSelected">
+    {{name}}
+  </view>
+</template>
+
+<template name="query_orders">
+  <view class="orders-list">
+    <view class="orders-title">
+      <text>订单编号：{{code}}</text>
+      <text class="orders-status">{{status}}</text>
+      <text class="orders-type">{{fixType}}：</text>
+    </view>
+    <view class="orders-detail">
+      <view class="">故障：{{fault}}(￥{{price}})</view>
+      <view wx:if="{{QType==0}}" class="">指派工程师：{{phone}} ({{name}})</view>
+      <view  wx:if="{{QType==1}}" class="">{{name}}：{{phone}} </view>
+    </view>
+    <view class="orders-footer">
+      <text> 订单时间：{{time}}</text>
+      <button size="mini" class="orders-btn" data-Phone="{{phone}}" bindtap="payOrders">电话联系</button>
+    </view>
+  </view>
+</template>
+
+<template name="query_list">
+  <view class="orders-list">
+    <view class="orders-title">
+      <text>订单编号：{{code}}</text>
+      <text class="orders-status">{{status}}</text>
+      <text class="orders-type">{{fixType}}：</text>
+    </view>
+    <view class="orders-detail">
+      <view class="">故障：{{phoneVer}}-{{fault}}(￥{{price}})</view>
+      <view wx:if="{{qType==0}}" class="">指派工程师：{{phone}} ({{name}})</view>
+      <view  wx:if="{{qType==1}}" class="">{{name}}：{{phone}}-{{addr}} </view>
+    </view>
+    <view class="orders-footer">
+      <text> 订单时间：{{time}}</text>
+      <button size="mini" class="orders-btn" data-Phone="{{phone}}" bindtap="payOrders">电话联系</button>
+    </view>
+  </view>
+</template>
+
+<template name="OrderList">
+  <view class="orders">
+    <text class="name">{{name}}</text>
+    <text class="fault">{{fault}}</text>
+    <text class="time">{{time}}</text>
+  </view>
+</template>
+
+<template name="process">
+  <view class="step">
+    <view class="left" style="float: left; width: 115rpx; height: {{height}};  ">
+      <view class="seq_border">
+        <view class="seq">{{index}}</view>
+      </view>
+      <text class="line"></text>
+      <block wx:for="{{count}}" wx:key="index">
+        <text class="line"></text>
+      </block>
+    </view>
+    <view class="right" style=" float: right; width: 630rpx; height: {{height}}; ">
+      <view class="title_s">{{caption}}</view>
+      <view class="content">{{content}}</view>
+    </view>
+  </view>
+</template>
+
+<template name="recycleList">
+  <view class="reorders">
+    <text class="userName">{{name}}：</text>
+    <text class="phone" data-phone="{{phone}}" bindtap="makePhone">{{phone}}</text>
+    <view class="addr">{{addr}}</view>
+    <text class="time">{{time}}</text>
+  </view>
+</template>
+<template name="feedback">
+  <view class="feedbackList">
+    <text class="time">{{time}}</text>
+    <view class="addr">{{addr}}</view>
+    <text class="f_phone" data-phone="{{phone}}" bindtap="makePhone">{{phone}}</text>
+    <text class="f_userName">{{name}}：</text>
+  </view>
+</template>

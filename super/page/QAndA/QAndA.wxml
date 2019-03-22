@@ -1,0 +1,29 @@
+<!--Q&A.wxml-->
+<view class="main">
+<view class="title">Q:超人修维修手机收上门费么？</view>
+<view class="content">A:只收取官方报价的维修费，不收取上门费以及其他费用</view>
+<view class="title">Q:超人修的配件是原装的么？</view>
+<view class="content">A:超人修是第三方维修机构，由于法律规定，非厂家授权维修不能使用原装字眼，超人修使用的配件全部是原厂品质</view>
+<view class="title">Q:超人修维修过后有没有质保？</view>
+<view class="content">A:超人修维修过后的手机提供长达180天的质保</view>
+<view class="title">Q:上门后没有维修，会不会收取费用？</view>
+<view class="content">A:未修复，不会收取任何费用</view>
+<view class="title">Q:你们的地址在哪里？</view>
+<view class="content">A:超人修公众账号菜单栏聊天回复【地址】，我们会将详细地址给到您哦，您也可以点击微信菜单栏【更多】里的【门店导航】</view>
+<view class="title">Q:预约上门维修后一般多久能到？</view>
+<view class="content">A:下单后工作时间10分钟内我们的客服会与您联系确认订单，一般安排后1小时左右能到</view>
+<view class="title">Q:维修一下需要多长时间能修好？</view>
+<view class="content">A:如无例外，一般故障都是在30分钟内能够修好</view>
+<view class="title">Q:内存升级后对手机有影响么？</view>
+<view class="content">A:内存升级只是将手机存储内存扩大，对运营速度并无影响</view>
+<view class="title">Q:内存升级后资料还在么？我该怎么备份资料？</view>
+<view class="content">A:内存升级后所有使用记录都没有了，备份方法请在微信平台回复【备份】二字，会有详细的备份知道自动回复给您</view>
+<view class="title">Q:内存升级你们可以帮我备份资料么？</view>
+<view class="content">A:您好，由于资料设计到您的个人隐私且无法估值，我们不提供备份资料的服务，为保障您自身权益，请自行备份。</view>
+<view class="title">Q:机子给你取回去，我有什么凭据么？我怎么放心呢？</view>
+<view class="content">A:您好，超人修是正规的维修平台，首先工程师穿着统一并有唯一的工号，同时机器取回前会开具一式三联的服务单您留存一联。</view>
+<view class="title">Q:你们取回去维修一般多久能好？</view>
+<view class="content">A:取回维修的机器，最迟24小时内会给用户回复是否能修复以及维修方案和准确报价；内存升级取回一般24小时内能送回。</view>
+<view class="title">Q:维修好能开发票么？</view>
+<view class="content">A:可以开发票的，维修完成后，您需在超人修微信平台回复【开票】，并按照自动回复的格式填写开票信息，我们将会在1周左右将发票邮寄到您指定处</view>
+</view>

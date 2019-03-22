@@ -1,0 +1,7 @@
+/* serviceterms.wxss */
+@import "/page/wxParse/wxParse.wxss";
+page {
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+}

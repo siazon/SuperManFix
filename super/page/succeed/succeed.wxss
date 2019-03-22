@@ -1,0 +1,50 @@
+/* succeed.wxss */
+page {
+  background-color:white ;
+  height: 100%;
+}
+.orders-footer {
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 15rpx 30rpx 15rpx 20rpx;
+}
+
+.orders-footer .orders-btn {
+  float: right;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 6rpx;
+  background: #5bcaff;
+  color: #fff;
+}
+.message{
+   height: 120rpx;
+  line-height: 120rpx;
+   text-align: center;
+  font-size: 50rpx;
+  font-weight: bold;
+  padding: 50rpx 0 0 0;
+}
+.message_detail{
+  height: 60rpx;
+  line-height: 60rpx;
+   text-align: center;
+
+}
+.message_footer{
+ height: 60rpx;
+  line-height: 60rpx;
+   text-align: center;
+  font-weight: bold;
+  margin: 0 100rpx 0 100rpx;
+}
+.message_image{
+  height: 500rpx;
+  line-height: 50rpx;
+   text-align: center;
+padding: 160rpx 0 120rpx 0;
+}
+.img{
+  height: 300rpx;
+  width: 300rpx;
+}

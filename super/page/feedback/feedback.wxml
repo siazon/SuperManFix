@@ -1,0 +1,12 @@
+<!--feedback.wxml-->
+<form class="form" bindsubmit="bindFormSubmit">
+  <textarea class="main_input" placeholder="在这里写你下您的意见和建议，您的感受对于我们十分重要！" name="textarea" />
+  <view class="phone info_item">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <input name='Phone' bindblur='phone_input' class=" weui-input" placeholder="留下您的联系方式，手机、邮箱或QQ" />
+    </view>
+  </view>
+</view>
+  <button class="Submit" form-type="submit"> 提交 </button>
+</form>

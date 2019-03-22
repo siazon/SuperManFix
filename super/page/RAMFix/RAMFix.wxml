@@ -1,0 +1,18 @@
+<!--page/RAMFix.wxml-->
+<text class="title">请选择手机型号</text>
+<view  class='info'>
+  <radio-group bindchange="checkboxChange" class='fixs'>
+      <radio class="rad" wx:for="{{fixs}}" value="{{item.phoneCode}}">{{item.phoneCode}}</radio>
+    </radio-group>
+</view>
+
+<text wx:if="{{infos.length>0}}" class="title">请选择扩容方案</text>
+<view class='gap info'>
+  <radio-group bindchange="infoChange" style="{{radinfo}}">
+      <radio class="rad" wx:for="{{infos}}" value="{{item.fixType}}+{{item.fixPrice}}">{{item.fixType}}->RMB：{{item.fixPrice}}</radio>
+    </radio-group>
+</view>
+<view class="cart-footer">
+  <text class="cart-toatl-price">￥{{totalPrice}}</text>
+  <view class="btnNext" bindtap="btnNext_click">下一步</view>
+</view>

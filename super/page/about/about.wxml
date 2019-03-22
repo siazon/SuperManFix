@@ -1,0 +1,18 @@
+<!--about.wxml-->
+<view class="about-page"></view>
+<view class="title">超人修简介</view>
+
+<view class="nom">  超人修是杭州小柏网络科技有限公司旗下互联网手机快修服务平台，注册资本100万元，公司位于杭州西湖国际科技大厦；专注服务于手机需要维修的用户，为用户解决手机维修时间过长且维修过程不透明的问题。
+</view>
+<view class="nom">我们如超人般快速：10分钟响应；1小时上门；30分钟修好。帮您节省昂贵的时间，让您的手机焕然一新！</view>
+<view class="nom">我们如超人般可靠。超人修所使用真正的原厂配件，并再由我们工业级设备检测+工程师反复人工测试后方可入库，超人修的专业维修工程师均有3年以上的维修经验，同时我们还提供180天的配件质量保证！保证用户的手机安全，免除用户的后顾之忧！</view>
+<view class="nom">我们如超人般体贴。我们想为您提供七星级的标准维修体验！我们的专业维修工程师均接受超过2个月以上的服务礼仪培训，拥有着一流的服务意识，让您的维修体验更满意。</view>
+<view class="nom">目前，超人修的上门服务范围已经覆盖杭州主城区，并且已经设立两家直营线下服务点。在未来，我们将继续努力提供优质上门维修服务的同时布局线下门店，为您提供更加快捷靠谱全方位的手机快修服务。</view>
+<view class='pwd' >
+ <input class="weui-input" type="text"  bindblur="pwd_input" placeholder="请输入工程师口令" />
+<!--<button class='btn'  bindtap='btn_click'>工程师认证</button>
+<!--<button class='btn' bindtap='btnmsg_click'>发送通知</button>-->
+
+<button class='btn' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">工程师认证</button>
+<form id="test1"></form>
+</view>

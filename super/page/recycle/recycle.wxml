@@ -1,0 +1,73 @@
+<!--page/recycle.wxml-->
+<view class='page__bd'>
+</view>
+
+<view class='con_panel'>
+  <view style='height:10rpx'></view>
+  <view class='b_Title'>
+    <label>一键回收</label>
+  </view>
+  <view style='height:20rpx'></view>
+  <view class='b_Flow_panel'>
+    <view class='b_Flow'>
+      <label>一键</label>
+      <label>回收</label>
+    </view>
+  <image   class='b_next_v'  src='/image/next.png'></image>
+  <image   class='b_next_v'  src='/image/next.png'></image>
+    <view class='b_Flow'>
+      <label>快速</label>
+      <label>估值</label>
+    </view>
+  <image  class='b_next_v' src='/image/next.png' mode='scaleToFill'></image>
+  <image  class='b_next_v' src='/image/next.png' mode='scaleToFill'></image>
+    <view class='b_Flow'>
+      <label>上门</label>
+      <label>回收</label>
+    </view>
+  </view>
+  <view class="info_item">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <input class="weui-input"  bindblur="UserName_input" placeholder="请输入您的姓名" />
+    </view>
+  </view>
+</view>
+  <view class="info_item">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <input class="weui-input"  bindblur="phone_input" placeholder="请输入您的手机号" />
+    </view>
+  </view>
+</view>
+<view class="info_item">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">杭州市</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker bindchange="bindDisChange" value="{{districtIndex}}" range="{{district}}">
+          <view class="weui-input">{{district[districtIndex]}}</view>
+        </picker>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="info_item">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <input class="weui-input" bindblur="Addr_change" placeholder="请输入详细地址" />
+    </view>
+  </view>
+</view>
+<view class="ver">
+    <checkbox  checked='false' bindtap='chkchange' >我同意</checkbox>
+    <text class="fw" bindtap="service_Click">回收服务条款</text>
+    </view>
+
+        <button class="btnSubmit" bindtap="btnSubmit_click">提交订单</button>
+        <view class='tel' bindtap='mackCall'>服务热线：4008-678-597</view> 
+       <!-- <view class='tipTime'>服务时间：7×24小时全年无休</view>-->
+        <view class='flow' bindtap='flowtap'>{{txtFlow}}</view> 
+</view>

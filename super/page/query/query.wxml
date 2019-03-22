@@ -1,0 +1,23 @@
+<!--query.wxml-->
+
+<import src="/page/temp/Temp.wxml" />
+
+<!--<view class="header">
+    <image src="{{thumb}}" class="thumb"></image>
+    <text class="nickname">{{nickname}}</text>
+    <text class="about">关于我们</text>
+  </view>-->
+
+<view class="search">
+
+  <view class="info_item">
+    <input class="weui-input" type="text" bindblur="phone_input" placeholder="请输入您下单的手机号码" />
+    <image class="iconQuery" src="/image/query.png" bindtap="btnQuery_Click"></image>
+  </view>
+</view>
+<view class="orders-box">
+  <view class="orders">我的订单</view>
+  <block wx:for="{{orders}}" wx:key="index">
+    <template is="query_orders" data="{{...item}}" />
+  </block>
+</view>

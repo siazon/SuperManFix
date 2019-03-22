@@ -1,0 +1,3 @@
+<button bindtap="choseImage">选择照片</button>
+<button bindtap="chosevideo">选择视频</button>
+<button bindtap="barcode">选择视频</button>

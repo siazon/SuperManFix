@@ -1,0 +1,47 @@
+<!--order.wxml-->
+<import src="/page/temp/Temp.wxml" />
+
+<view class="title">手机型号</view>
+<view class="ver_con">
+  <view class="ver">{{BlandVer}}</view>
+</view>
+<view class="title">维修信息</view>
+<view class="conent">
+  <block wx:for="{{orders}}" wx:key="index">
+    <template is="Order_item" data="{{...item}}" />
+  </block>
+</view>
+<view class="ps_connect">
+  <view class="connect_ps_title">备注：</view>
+  <view class="connect_ps">{{state}}</view>
+</view>
+
+<view class="summry">
+  <view class="summry_itme">
+    <text>已选择故障：</text>
+    <text>{{FaultCount}}</text>
+    <text>个</text>
+  </view>
+
+   <view class="summry_itme">
+    <text>维修价格：￥</text>
+    <text>{{Amount}}</text>
+    <text class="summry_right">维修后需支付</text>
+  </view>
+
+    <view class="summry_itme">
+    <text>优惠：￥</text>
+    <text>{{ReAmount}}</text>
+    <view class="price_right">
+    <text >￥</text>
+    <text >{{TotalAmount}}</text>
+    </view>
+  </view>
+    <view class="ver">
+    <checkbox  checked="{{IsRead}}" bindtap='Chk_Click' >我同意</checkbox>
+    <text class="fw" bindtap="service_Click"> 维修服务条款</text>
+    </view>
+</view>
+
+
+    <button class="btnSubmit" bindtap="btnSubmit_click">确认下单</button>

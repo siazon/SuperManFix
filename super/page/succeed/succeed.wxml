@@ -1,0 +1,25 @@
+<!--succeed.wxml-->
+
+
+<view class="message">{{msg.msgTitle}}</view>
+<!--<view  wx:if="{{msg.msgType>0}}"  class="message_footer">工作时间：9：00 - 18：00</view>-->
+<view class="message_footer">{{msg.msgInfo}}</view>
+<!-- <view class="orders-footer">
+      <text> 订单时间：{{Time}}</text>
+                  <button size="mini" class="orders-btn" bindtap="payOrders">电话联系</button>
+                  <view class="message_footer">工作时间：9：00 - 18：00</view></view>
+<!-- <view class="orders-footer">
+      <text> 订单时间：{{Time}}</text>
+            <button size="mini" class="orders-btn" bindtap="payOrders">电话联系</button>
+<view class="message_footer">工作时间：9：00 - 18：00</view>
+<view class="message_footer">我们的工作人员将会在10分钟内与您取得联系</view>
+<!-- <view class="orders-footer">
+      <text> 订单时间：{{Time}}</text>
+      <button size="mini" class="orders-btn" bindtap="payOrders">电话联系</button>
+    </view>-->
+<view class="message_image">
+  <image class="img" wx:if="{{msg.msgType>0}}" src="/image/done.png" mode="aspectFit"></image>
+  <image class="img" wx:if="{{msg.msgType<1}}" src="/image/Err.png" mode="aspectFit"></image>
+</view>
+<view class="message_footer">超人修人工客服</view>
+<view class="message_footer">4008-678-597</view>
